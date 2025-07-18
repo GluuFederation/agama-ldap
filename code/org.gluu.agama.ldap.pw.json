@@ -23,7 +23,7 @@
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
-					"configs": "",
+					"configs": "conf",
 					"flowname": "org.gluu.agama.ldap.pw",
 					"displayName": "Agama ldap",
 					"creationDate": "19/07/2025",
@@ -34,7 +34,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
@@ -105,7 +106,48 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "callNode-a5b17e95-97ae-4612-8440-e270d1f0ff7d",
+			"type": "callNode",
+			"position": {
+				"x": 780,
+				"y": 30
+			},
+			"data": {
+				"id": "callNode-a5b17e95-97ae-4612-8440-e270d1f0ff7d",
+				"type": "callNode",
+				"position": {
+					"x": 780,
+					"y": 30
+				},
+				"previousNodeId": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.ldap.pw.PasswordService",
+					"javaMethodName": "getInstance",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [
+						"conf"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Get an instance of PasswordService Class.",
+					"asssignedVariableName": "validationService"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -146,11 +188,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb"
+		},
+		{
+			"id": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f-callNode-a5b17e95-97ae-4612-8440-e270d1f0ff7d",
+			"type": "default",
+			"source": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+			"target": "callNode-a5b17e95-97ae-4612-8440-e270d1f0ff7d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f"
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -459,
+		"y": 124,
 		"zoom": 1
 	}
 }
