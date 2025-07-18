@@ -1,36 +1,99 @@
 {
-  "nodes": [
-    {
-      "id": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
-      "type": "startNode",
-      "sourcePosition": "right",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "deletable": false,
-      "data": {
-        "id": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
-        "type": "startNode",
-        "position": {
-          "x": 30,
-          "y": 40
-        },
-        "agamaData": {
-          "isTopLevelFlow": true,
-          "basepath": "",
-          "configParams": "{}",
-          "nodeIcon": "material-symbols:line-start-square",
-          "timeout": "",
-          "inputs": "",
-          "configs": "",
-          "flowname": "org.gluu.agama.ldap.pw",
-          "displayName": "Agama ldap",
-          "creationDate": "19/07/2025",
-          "hasComment": true,
-          "comment": ""
-        }
-      }
-    }
-  ]
+	"nodes": [
+		{
+			"id": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
+			"type": "startNode",
+			"sourcePosition": "right",
+			"position": {
+				"x": 30,
+				"y": 30
+			},
+			"deletable": false,
+			"data": {
+				"id": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
+				"type": "startNode",
+				"position": {
+					"x": 30,
+					"y": 40
+				},
+				"agamaData": {
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "",
+					"configs": "",
+					"flowname": "org.gluu.agama.ldap.pw",
+					"displayName": "Agama ldap",
+					"creationDate": "19/07/2025",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			}
+		},
+		{
+			"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+			"type": "logNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+				"type": "logNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
+				"agamaData": {
+					"logMessage": "\"Start execution of the password validation flow.\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Start execution of the password validation flow."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
+		}
+	],
+	"edges": [
+		{
+			"id": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f-logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+			"type": "default",
+			"source": "startNode-238f0175-e072-4b62-8e86-9ba50f210f4f",
+			"target": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-238f0175-e072-4b62-8e86-9ba50f210f4f"
+		}
+	],
+	"viewport": {
+		"x": 0,
+		"y": 0,
+		"zoom": 1
+	}
 }
