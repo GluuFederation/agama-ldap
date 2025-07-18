@@ -67,6 +67,44 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+			"type": "assignmentNode",
+			"position": {
+				"x": 530,
+				"y": 30
+			},
+			"data": {
+				"id": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+				"type": "assignmentNode",
+				"position": {
+					"x": 530,
+					"y": 30
+				},
+				"previousNodeId": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "uiFeedback"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Create json variable for UI feedback."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -89,6 +127,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-238f0175-e072-4b62-8e86-9ba50f210f4f"
+		},
+		{
+			"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb-assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+			"type": "default",
+			"source": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
+			"target": "assignmentNode-69614b77-cb9d-48e9-b566-b4ba5d1a993f",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb"
 		}
 	],
 	"viewport": {
