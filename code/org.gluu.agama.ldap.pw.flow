@@ -1,6 +1,9 @@
 Flow org.gluu.agama.ldap.pw
      Basepath ""
+     Configs conf
 // Start execution of the password validation flow.
 Log "@info Start execution of the password validation flow."
 // Create json variable for UI feedback.
 uiFeedback = {}
+// Get an instance of PasswordService Class.
+validationService = Call org.gluu.agama.ldap.pw.PasswordService#getInstance conf
