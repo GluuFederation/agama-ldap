@@ -15,7 +15,8 @@
     ],
     "noDirectLaunch": [],
     "configs": {
-        "org.gluu.agama.ldap.pw.main": {}
+        "org.gluu.agama.ldap.pw.main": {},
+        "org.gluu.agama.ldap.pw": {}
     },
     "name": "agama-ldap"
 }
