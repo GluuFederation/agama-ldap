@@ -20,12 +20,13 @@ count = Repeat 6 times max
           // add entry in log file for successfull login attempt.
           Log "@info Valid credentials provided"
           // Password validation completed successfuly!
-          it_ldpue = {success:true, data: { userId: credentials.username}}
-          Finish it_ldpue
+          it_dvkyg = {success:true, data: { userId: credentials.username}}
+          Finish it_dvkyg
      // Invalid credentials provided.
      Log "@info Invalid credentials provided"
+     When conf.ENABLE_LOCK is true
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_idzxi = {success:false, error: "Password validation failed!"}
-Finish it_idzxi
+it_uzbld = {success:false, error: "Password validation failed!"}
+Finish it_uzbld
