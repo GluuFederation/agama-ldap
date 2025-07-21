@@ -16,6 +16,9 @@ import io.jans.model.ldap.GluuLdapConfiguration;
 import org.gluu.agama.ldap.pw.PasswordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.jans.agama.engine.script.LogUtils;
+
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -51,7 +54,7 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
     private boolean useInternalLdapConfig;
 
     public JansLdapPasswordService(HashMap config) {
-        logger.info("Flow config provided is  {}.", config);
+        LogUtils.log("Flow config provided is %.", config);
         
         boolean newConfig = flowConfig == null ? false : !config.equals(flowConfig);
         flowConfig = config;
@@ -89,7 +92,7 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
 
     @Override
     public boolean validate(String username, String password) {
-        logger.info("Validating user credentials.");
+        LogUtils.log("Validating user credentials.");
 
         UserService userService = CdiUtil.bean(UserService.class);
         AuthenticationService authenticationService = CdiUtil.bean(AuthenticationService.class);
@@ -102,11 +105,11 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
         }
 
         if (loggedIn && lockAccount) {
-            logger.info("Credentials are valid and user account locked feature is activated");
+            LogUtils.log("Credentials are valid and user account locked feature is activated");
             User currentUser = userService.getUser(username);
             userService.addUserAttribute(currentUser, loginCountAttribute, 0);
             userService.updateUser(currentUser);
-            logger.info("Invalid login count reset to zero for {} .", username);
+            LogUtils.log("Invalid login count reset to zero for % .", username);
         }
 
         return loggedIn;
@@ -126,21 +129,21 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
         }
         
         GluuStatus currentStatus = currentUser.getStatus();
-        logger.info("Current user status is: {}", currentStatus);
+        LogUtils.log("Current user status is: %", currentStatus);
         
         if (currentFailCount < defaultMaxLoginAttempt) {
             int remainingCount = defaultMaxLoginAttempt - currentFailCount;
-            logger.info("Remaining login count: {} for user {}", remainingCount, username);
+            LogUtils.log("Remaining login count: % for user %", remainingCount, username);
             if ((remainingCount > 0) && (GluuStatus.ACTIVE == currentStatus)) {
                 setCustomAttribute(userService, currentUser, loginCountAttribute, String.valueOf(currentFailCount));
-                logger.info("{}  more attempt(s) before account is LOCKED!", remainingCount);
+                LogUtils.log("%  more attempt(s) before account is LOCKED!", remainingCount);
             }
             
             return "You have " + remainingCount + " more attempt(s) before your account is locked.";
         }
         
         if ((currentFailCount >= defaultMaxLoginAttempt) && (GluuStatus.ACTIVE == currentStatus)) {
-            logger.info("Locking {} account for {} seconds.", username, defaultLockExpTime);
+            LogUtils.log("Locking % account for % seconds.", username, defaultLockExpTime);
             String object_to_store = "{'locked': 'true'}";
             currentUser.setStatus(GluuStatus.INACTIVE);
             cacheService.put(defaultLockExpTime, CACHE_PREFIX + username, object_to_store);
@@ -149,10 +152,10 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
         }
         
         if ((currentFailCount >= defaultMaxLoginAttempt) && (GluuStatus.INACTIVE == currentStatus)) {
-            logger.info("User {} account is already locked. Checking if we can unlock", username);
+            LogUtils.log("User % account is already locked. Checking if we can unlock", username);
             String cache_object = (String) cacheService.get(CACHE_PREFIX + username);
             if (cache_object == null) {
-                logger.info("Unlocking user {} account", username);
+                LogUtils.log("Unlocking user % account", username);
                 currentUser.setStatus(GluuStatus.ACTIVE);
                 setCustomAttribute(userService, currentUser, loginCountAttribute, "0");
                 
@@ -184,51 +187,51 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
         int idx = 1;
     	for (HashMap serverConfig : serversConfig) {
             if (!containsNotEmptyString(serverConfig, "configId")) {
-                logger.error("There is no 'configId' attribute in server configuration section #{}", idx);
+                LogUtils.log("There is no 'configId' attribute in server configuration section #%", idx);
                 return false;
             }
 
             String configId = (String) serverConfig.get("configId");
 
             if (!containsNotEmptyList(serverConfig, "servers")) {
-                logger.error("Property 'servers' in configuration '{}' is invalid'", configId);
+                LogUtils.log("Property 'servers' in configuration '%' is invalid'", configId);
                 return false;
             }
 
             if (containsNotEmptyString(serverConfig, "bindDN")) {
                 if (!containsNotEmptyString(serverConfig, "bindPassword")) {
-                    logger.error("Property 'bindPassword' in configuration '{}' is invalid", configId);
+                    LogUtils.log("Property 'bindPassword' in configuration '%' is invalid", configId);
                     return false;
                 }
             }
 
             if (!containsNotEmptyBoolean(serverConfig, "useSSL")) {
-                logger.error("Property 'useSSL' in configuration '{}' is invalid", configId);
+                LogUtils.log("Property 'useSSL' in configuration '%' is invalid", configId);
                 return false;
             }
 
             if (!containsNotEmptyInteger(serverConfig, "maxConnections")) {
-                logger.error("Property 'maxConnections' in configuration '{}' is invalid", configId);
+                LogUtils.log("Property 'maxConnections' in configuration '%' is invalid", configId);
                 return false;
             }
                 
             if (!containsNotEmptyList(serverConfig, "baseDNs")) {
-                logger.error("Property 'baseDNs' in configuration '{}' is invalid", configId);
+                LogUtils.log("Property 'baseDNs' in configuration '%' is invalid", configId);
                 return false;
             }
 
             if (!containsNotEmptyList(serverConfig, "loginAttributes")) {
-                logger.error("Property 'loginAttributes' in configuration '{}' is invalid", configId);
+                LogUtils.log("Property 'loginAttributes' in configuration '%' is invalid", configId);
                 return false;
             }
 
             if (!containsNotEmptyList(serverConfig, "localLoginAttributes")) {
-                logger.error("Property 'localLoginAttributes' in configuration '{}' is invalid", configId);
+                LogUtils.log("Property 'localLoginAttributes' in configuration '%' is invalid", configId);
                 return false;
             }
 
             if (((List) serverConfig.get("loginAttributes")).size() != ((List) serverConfig.get("localLoginAttributes")).size()) {
-                logger.error("The number of attributes in 'loginAttributes' and 'localLoginAttributes' isn't equal in configuration '{}'", configId);
+                LogUtils.log("The number of attributes in 'loginAttributes' and 'localLoginAttributes' isn't equal in configuration '%'", configId);
                 return false;
             }
 
