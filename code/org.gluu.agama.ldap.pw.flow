@@ -20,10 +20,12 @@ count = Repeat 6 times max
           // add entry in log file for successfull login attempt.
           Log "@info Valid credentials provided"
           // Password validation completed successfuly!
-          it_hvhkv = {success:true, data: { userId: credentials.username}}
-          Finish it_hvhkv
+          it_ldpue = {success:true, data: { userId: credentials.username}}
+          Finish it_ldpue
+     // Invalid credentials provided.
+     Log "@info Invalid credentials provided"
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_qtqdk = {success:false, error: "Password validation failed!"}
-Finish it_qtqdk
+it_idzxi = {success:false, error: "Password validation failed!"}
+Finish it_idzxi
