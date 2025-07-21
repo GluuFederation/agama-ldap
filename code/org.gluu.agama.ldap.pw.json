@@ -211,8 +211,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 124
+				"width": 168,
+				"height": 120
 			},
 			"selected": false
 		},
@@ -547,8 +547,42 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+			"type": "logNode",
+			"position": {
+				"x": 2799,
+				"y": 425
+			},
+			"data": {
+				"id": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+				"type": "logNode",
+				"position": {
+					"x": 2799,
+					"y": 425
+				},
+				"previousNodeId": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Start account lock process\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Account lock feature is active."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -817,6 +851,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-02b49ad4-c968-4e02-add1-d06ab6c916f7"
+		},
+		{
+			"id": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f-logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+			"type": "default",
+			"source": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f",
+			"target": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f_success"
 		}
 	],
 	"viewport": {
