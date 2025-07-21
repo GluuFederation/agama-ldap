@@ -693,7 +693,42 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "logNode-2f619166-6f05-46a3-9ee1-65fa81caccd1",
+			"type": "logNode",
+			"position": {
+				"x": 2799,
+				"y": 225
+			},
+			"data": {
+				"id": "logNode-2f619166-6f05-46a3-9ee1-65fa81caccd1",
+				"type": "logNode",
+				"position": {
+					"x": 2799,
+					"y": 225
+				},
+				"previousNodeId": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"Maximum attempts reached. Password validation failed.\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Maximum attempts reached. Password validation failed!"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1038,11 +1073,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-a340c4dc-7670-40da-9e3a-b2319ebe337c"
+		},
+		{
+			"id": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f-logNode-2f619166-6f05-46a3-9ee1-65fa81caccd1",
+			"type": "default",
+			"source": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f",
+			"target": "logNode-2f619166-6f05-46a3-9ee1-65fa81caccd1",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f_continue"
 		}
 	],
 	"viewport": {
-		"x": -2813,
-		"y": -266,
+		"x": -2320,
+		"y": 49,
 		"zoom": 1
 	}
 }
