@@ -20,8 +20,8 @@ count = Repeat 6 times max
           // add entry in log file for successfull login attempt.
           Log "@info Valid credentials provided"
           // Password validation completed successfuly!
-          it_koslx = {success:true, data: { userId: credentials.username}}
-          Finish it_koslx
+          it_mxazx = {success:true, data: { userId: credentials.username}}
+          Finish it_mxazx
      // Invalid credentials provided.
      Log "@info Invalid credentials provided"
      When conf.ENABLE_LOCK is true
@@ -29,8 +29,10 @@ count = Repeat 6 times max
           Log "@info Start account lock process"
           // Lock user account if needed or unlock if the expiration time  is over
           lockResult = Call validationService lockAccount credentials.username
+          // Account lock result
+          Log "@info Account lock result" lockResult
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_ftlco = {success:false, error: "Password validation failed!"}
-Finish it_ftlco
+it_bfcaq = {success:false, error: "Password validation failed!"}
+Finish it_bfcaq
