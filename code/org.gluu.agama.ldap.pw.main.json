@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
@@ -712,7 +712,7 @@
 				"previousNodeId": "whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "\"Maximum attempts reached. Password validation failed.\"",
+					"logMessage": "\"Password validation failed.\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -727,7 +727,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1157,8 +1157,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -2359,
+		"y": -91,
 		"zoom": 1
 	}
 }
