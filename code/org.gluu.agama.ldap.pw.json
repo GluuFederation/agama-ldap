@@ -311,7 +311,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Log the successfull  used credentials retrieval."
 				}
 			},
 			"measured": {
@@ -476,8 +476,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1067,
-		"y": -9,
+		"x": -1066,
+		"y": -10,
 		"zoom": 1
 	}
 }
