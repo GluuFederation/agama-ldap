@@ -7,3 +7,5 @@ Log "@info Start execution of the password validation flow."
 uiFeedback = {}
 // Get an instance of PasswordService Class.
 validationService = Call org.gluu.agama.ldap.pw.PasswordService#getInstance conf
+// Iterate x times max
+count = Repeat 6 times max
