@@ -180,6 +180,40 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-3c7b166c-ce7b-4d17-9cdc-abb570e30555",
+			"type": "logNode",
+			"position": {
+				"x": 1280,
+				"y": 30
+			},
+			"data": {
+				"id": "logNode-3c7b166c-ce7b-4d17-9cdc-abb570e30555",
+				"type": "logNode",
+				"position": {
+					"x": 1280,
+					"y": 30
+				},
+				"previousNodeId": "repeatNode-fd2a53f2-902c-495c-829c-202b96f7827a",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"The maximum login attempt has been reached!\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "The login flow will end here with failure."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -259,6 +293,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-a5b17e95-97ae-4612-8440-e270d1f0ff7d"
+		},
+		{
+			"id": "repeatNode-fd2a53f2-902c-495c-829c-202b96f7827a-logNode-3c7b166c-ce7b-4d17-9cdc-abb570e30555",
+			"type": "default",
+			"source": "repeatNode-fd2a53f2-902c-495c-829c-202b96f7827a",
+			"target": "logNode-3c7b166c-ce7b-4d17-9cdc-abb570e30555",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-fd2a53f2-902c-495c-829c-202b96f7827a_continue"
 		}
 	],
 	"viewport": {
