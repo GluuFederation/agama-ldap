@@ -582,6 +582,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-e6c368af-a3a2-4a58-bf45-bbd87024abcd",
+			"type": "callNode",
+			"position": {
+				"x": 3049,
+				"y": 425
+			},
+			"data": {
+				"id": "callNode-e6c368af-a3a2-4a58-bf45-bbd87024abcd",
+				"type": "callNode",
+				"position": {
+					"x": 3049,
+					"y": 425
+				},
+				"previousNodeId": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "lockAccount",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"credentials.username"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Lock user account if needed or unlock if the expiration time  is over",
+					"asssignedVariableName": "lockResult"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -870,11 +910,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-d00eafab-5f93-440a-bb7c-a808a9dc046f_success"
+		},
+		{
+			"id": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5-callNode-e6c368af-a3a2-4a58-bf45-bbd87024abcd",
+			"type": "default",
+			"source": "logNode-9210d85b-642f-4caa-9cca-d76770a430f5",
+			"target": "callNode-e6c368af-a3a2-4a58-bf45-bbd87024abcd",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-9210d85b-642f-4caa-9cca-d76770a430f5"
 		}
 	],
 	"viewport": {
-		"x": -2279,
-		"y": 12,
+		"x": -2445,
+		"y": -266,
 		"zoom": 1
 	}
 }
