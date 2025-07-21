@@ -20,8 +20,8 @@ count = Repeat 6 times max
           // add entry in log file for successfull login attempt.
           Log "@info Valid credentials provided"
           // Password validation completed successfuly!
-          it_iznsg = {success:true, data: { userId: credentials.username}}
-          Finish it_iznsg
+          it_kyuex = {success:true, data: { userId: credentials.username}}
+          Finish it_kyuex
      // Invalid credentials provided.
      Log "@info Invalid credentials provided"
      When conf.ENABLE_LOCK is true
@@ -39,5 +39,5 @@ count = Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_tpabd = {success:false, error: "Password validation failed!"}
-Finish it_tpabd
+it_ltyak = {success:false, error: "Password validation failed!"}
+Finish it_ltyak
