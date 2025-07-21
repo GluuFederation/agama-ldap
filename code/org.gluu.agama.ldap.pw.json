@@ -318,6 +318,47 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-741ade81-a187-4989-81cb-1295234106db",
+			"type": "callNode",
+			"position": {
+				"x": 1780,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-741ade81-a187-4989-81cb-1295234106db",
+				"type": "callNode",
+				"position": {
+					"x": 1780,
+					"y": 280
+				},
+				"previousNodeId": "logNode-d5a1a13f-a742-4343-ba41-1e470871b686",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "validate",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"credentials.username",
+						"credentials.password"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Validate provided user credentials.",
+					"asssignedVariableName": "uiFeedback.succeed"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -473,11 +514,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-731cb548-da40-4c4a-8d4f-ec64f4cf9845"
+		},
+		{
+			"id": "logNode-d5a1a13f-a742-4343-ba41-1e470871b686-callNode-741ade81-a187-4989-81cb-1295234106db",
+			"type": "default",
+			"source": "logNode-d5a1a13f-a742-4343-ba41-1e470871b686",
+			"target": "callNode-741ade81-a187-4989-81cb-1295234106db",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-d5a1a13f-a742-4343-ba41-1e470871b686"
 		}
 	],
 	"viewport": {
-		"x": -1066,
-		"y": -10,
+		"x": -1318,
+		"y": -46,
 		"zoom": 1
 	}
 }
