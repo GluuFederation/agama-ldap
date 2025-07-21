@@ -15,7 +15,11 @@
     ],
     "noDirectLaunch": [],
     "configs": {
-        "org.gluu.agama.ldap.pw.main": {}
+        "org.gluu.agama.ldap.pw.main": {
+            "MAX_LOGIN_ATTEMPT": 6,
+            "ENABLE_LOCK": true,
+            "LOCK_EXP_TIME": 180
+        }
     },
     "name": "agama-ldap"
 }
