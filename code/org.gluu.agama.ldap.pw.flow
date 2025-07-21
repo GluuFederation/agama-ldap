@@ -20,8 +20,8 @@ count = Repeat 6 times max
           // add entry in log file for successfull login attempt.
           Log "@info Valid credentials provided"
           // Password validation completed successfuly!
-          it_qtnkm = {success:true, data: { userId: credentials.username}}
-          Finish it_qtnkm
+          it_tlawb = {success:true, data: { userId: credentials.username}}
+          Finish it_tlawb
      // Invalid credentials provided.
      Log "@info Invalid credentials provided"
      When conf.ENABLE_LOCK is true
@@ -32,8 +32,10 @@ count = Repeat 6 times max
           // Account lock result
           Log "@info Account lock result" lockResult
           uiFeedback.lockMessage = lockResult
+     // Maximum attempts reached. Password validation failed!
+     Log "@info Maximum attempts reached. Password validation failed."
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_ddtmo = {success:false, error: "Password validation failed!"}
-Finish it_ddtmo
+it_tsayr = {success:false, error: "Password validation failed!"}
+Finish it_tsayr
