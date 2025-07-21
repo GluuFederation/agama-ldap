@@ -9,3 +9,5 @@ uiFeedback = {}
 validationService = Call org.gluu.agama.ldap.pw.PasswordService#getInstance conf
 // Iterate x times max
 count = Repeat 6 times max
+// The login flow will end here with failure.
+Log "@info The maximum login attempt has been reached!"
