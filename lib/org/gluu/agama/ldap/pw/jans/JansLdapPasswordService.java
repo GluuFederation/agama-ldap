@@ -31,7 +31,7 @@ import java.util.ArrayList;
  */
 public class JansLdapPasswordService extends PasswordService implements AutoCloseable {
 
-    private static final Logger logger = LoggerFactory.getLogger(FlowService.class);
+    // private static final Logger logger = LoggerFactory.getLogger(FlowService.class);
 
     private static final String LOCK_CONFIG = "lockConfig";
     private static final String SERVERS_CONFIG = "serversConfig";
@@ -90,7 +90,7 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
     public JansLdapPasswordService() {
     }
 
-    @Override
+    // @Override
     public boolean validate(String username, String password) {
         LogUtils.log("Validating user credentials.");
 
