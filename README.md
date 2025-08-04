@@ -77,16 +77,17 @@ Below is a typical agama-ldap flow
 - useInternalLdapConfig: Specify which LDAP configuration to use. `true` means that agama-ldap should use Jans Auth LDAP server configurations. `false` allow to specify LDAP configurations in `serverConfig` section.
 - serversConfig: One or more LDAP server configurations
 
-> *Note*:
-  The user must exist in both your local database and the remote LDAP server.
-  If the user exists only in the remote LDAP, you can use the [Jans Link](https://docs.jans.io/head/janssen-server/link/) service to synchronize their data to the local database.
-
 ## TUI sample settings:
 
 These are sample setting for `useInternalLdapConfig = true`:
 
 ![tui_ldap_1](https://github.com/GluuFederation/agama-ldap/assets/6104200/a182873c-30c0-4584-bf5c-454d87b38b7b)
 ![tui_ldap_2](https://github.com/GluuFederation/agama-ldap/assets/6104200/6da99409-ed98-43d8-b77b-5f8c47a18773)
+
+> *Note*:
+  The user must exist in both your local database and the remote LDAP server.
+  If the user exists only in the remote LDAP, you can use the [Jans Link](https://docs.jans.io/head/janssen-server/link/) service to synchronize their data to the local database.
+
 
 # License
 
