@@ -63,7 +63,7 @@ public class JansLdapPasswordService extends PasswordService implements AutoClos
         	HashMap lockConfig = (HashMap) config.get(LOCK_CONFIG);
         	defaultMaxLoginAttempt = (int) lockConfig.get("MAX_LOGIN_ATTEMPT");
         	defaultLockExpTime = (int) lockConfig.get("LOCK_EXP_TIME");
-        	lockAccount = (boolean) lockConfig.get("ENABLE_ACCOUNT_LOCK");
+        	lockAccount = (boolean) lockConfig.get("ENABLE_LOCK");
         }
 
         if (containsNotEmptyBoolean(config, "useInternalLdapConfig")) {
