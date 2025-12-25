@@ -19,7 +19,35 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n      \"lockConfig\": {\n          \"MAX_LOGIN_ATTEMPT\": 6,\n          \"ENABLE_LOCK\": true,\n          \"LOCK_EXP_TIME\": 180\n      },\n      \"useInternalLdapConfig\": false,\n      \"serversConfig\": [\n          {\n              \"configId\": \"ad_1\",\n              \"bindDN\": \"cn=directory manager\",\n              \"bindPassword\": \"encoded_password/plain_passowrd\",\n              \"servers\": [\"localhost:1389\"],\n              \"maxConnections\": 3,\n              \"useSSL\": false,\n              \"baseDNs\": [\"ou=people,o=jans\"],\n              \"loginAttributes\": [\"uid\"],\n              \"localLoginAttributes\": [\"uid\"]\n           }\n       ]\n  }",
+					"configParams": {
+						"lockConfig": {
+							"MAX_LOGIN_ATTEMPT": 6,
+							"ENABLE_LOCK": true,
+							"LOCK_EXP_TIME": 180
+						},
+						"useInternalLdapConfig": false,
+						"serversConfig": [
+							{
+								"configId": "ad_1",
+								"bindDN": "cn=directory manager",
+								"bindPassword": "encoded_password/plain_passowrd",
+								"servers": [
+									"localhost:1389"
+								],
+								"maxConnections": 3,
+								"useSSL": false,
+								"baseDNs": [
+									"ou=people,o=jans"
+								],
+								"loginAttributes": [
+									"uid"
+								],
+								"localLoginAttributes": [
+									"uid"
+								]
+							}
+						]
+					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -35,7 +63,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-9e6c14b3-adeb-4d6e-b75a-35fc2410b8cb",
@@ -727,7 +755,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
