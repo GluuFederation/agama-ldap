@@ -4,4 +4,4 @@ To obtain a managed bean inside agama flow [CdiUtil](https://github.com/JanssenP
 
 1. AuthenticationService
 
-Allow to authenticate a user or obtain the current authenticated user. To know more visit [here](https://docs.jans.io/head/admin/developer/managed-beans/#1-authenticationservice)
+Allow to authenticate a user or obtain the current authenticated user. To know more visit [here](https://docs.jans.io/head/janssen-server/developer/managed-beans/#1-authenticationservice)
