@@ -71,11 +71,14 @@ Below is a typical agama-ldap flow
 }
 
   ```
-- MAX_LOGIN_ATTEMPT: Is the maximum failed login attempt before the user account is locked
-- ENABLE_LOCK: true/false, this is use to enable the Account Lock feature
-- LOCK_EXP_TIME: The time in seconds befor a locked account is unlock.
-- useInternalLdapConfig: Specify which LDAP configuration to use. `true` means that agama-ldap should use Jans Auth LDAP server configurations. `false` allow to specify LDAP configurations in `serverConfig` section.
-- serversConfig: One or more LDAP server configurations
+| Parameter               | Required    | Description                                                                                                                                                                                   | Example                                      |
+| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `maxLoginAttempt`       | Yes         | Maximum number of consecutive failed login attempts allowed before the user account is locked.                                                                                                | `6`                                          |
+| `enableLock`            | Yes         | Enables or disables the account lockout feature. Set to `true` to enable account locking after the maximum number of failed login attempts is reached; set to `false` to disable it.          | `true`                                       |
+| `lockExpTime`           | Yes         | The duration, in seconds, that a user account remains locked before it is automatically unlocked.                                                                                             | `180`                                        |
+| `useInternalLdapConfig` | Yes         | Specifies which LDAP configuration to use. Set to `true` to use the LDAP server configuration from Jans Auth. Set to `false` to use the LDAP server configuration defined in `serversConfig`. | `true`                                       |
+| `serversConfig`         | Conditional | One or more LDAP server configurations. This parameter is required only when `useInternalLdapConfig` is set to `false`.                                                                       | See LDAP server configuration example below. |
+
 
 ## TUI sample settings:
 
